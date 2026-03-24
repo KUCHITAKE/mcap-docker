@@ -5,26 +5,26 @@ Container image for the [MCAP CLI](https://github.com/foxglove/mcap) — a tool 
 ## Pull
 
 ```bash
-docker pull ghcr.io/kuchitake/mcap-cli-image:latest
+docker pull ghcr.io/kuchitake/mcap-docker:latest
 ```
 
 ## Usage
 
 ```bash
 # Show file info
-docker run --rm -v $(pwd):/data ghcr.io/kuchitake/mcap-cli-image info /data/recording.mcap
+docker run --rm -v $(pwd):/data ghcr.io/kuchitake/mcap-docker info /data/recording.mcap
 
 # List channels
-docker run --rm -v $(pwd):/data ghcr.io/kuchitake/mcap-cli-image list channels /data/recording.mcap
+docker run --rm -v $(pwd):/data ghcr.io/kuchitake/mcap-docker list channels /data/recording.mcap
 
 # Merge files
-docker run --rm -v $(pwd):/data ghcr.io/kuchitake/mcap-cli-image merge /data/a.mcap /data/b.mcap -o /data/merged.mcap
+docker run --rm -v $(pwd):/data ghcr.io/kuchitake/mcap-docker merge /data/a.mcap /data/b.mcap -o /data/merged.mcap
 ```
 
 ### Shell alias
 
 ```bash
-alias mcap='docker run --rm -v $(pwd):/data ghcr.io/kuchitake/mcap-cli-image'
+alias mcap='docker run --rm -v $(pwd):/data ghcr.io/kuchitake/mcap-docker'
 mcap info /data/recording.mcap
 ```
 
